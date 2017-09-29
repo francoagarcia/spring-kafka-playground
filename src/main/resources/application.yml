@@ -1,0 +1,14 @@
+kafka:
+  bootstrap-servers: localhost:9092
+  topic:
+    playground-req: playground.req
+  consumer:
+    group-id: 1
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        boot: INFO
+        web: INFO
