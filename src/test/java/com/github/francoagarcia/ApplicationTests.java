@@ -26,10 +26,7 @@ public class ApplicationTests {
 	private final static String tPlaygroundRequest = "playground.req";
 
 	@Autowired
-	private BasicSender<User> sender;
-	
-	@Autowired
-	private KafkaTemplate<String, Message> template;
+	private BasicSender<Message<User>> sender;
 	
 	@Autowired
 	private KafkaListenerEndpointRegistry containerRegistry;
@@ -48,7 +45,12 @@ public class ApplicationTests {
 	@Test
 	public void testSendMessage() {
 		User user = new User("franco", "franco");
-		Message<User> message = new MessageBuilder<User>().setData(user).build();
+		
+		Message<User> message = new MessageBuilder<User>()
+										.messageType("test")
+										.data(user)
+										.build();
+		
 		sender.send(tPlaygroundRequest, message);
 	}
 

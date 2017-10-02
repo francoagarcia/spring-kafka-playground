@@ -1,0 +1,9 @@
+{"namespace": "com.github.francoagarcia",
+  "type": "record",
+  "name": "UserMessage",
+  "fields": [
+    {"name": "", "type": "string"},
+    {"name": "",  "type": ["int", "null"]},
+    {"name": "", "type": ["string", "null"]}
+  ]
+}

@@ -12,19 +12,19 @@ public class MessageBuilder<T> {
 		return message;
 	}
 	
-	public MessageBuilder setTopicResponse(final String topicResponse){
+	public MessageBuilder<T> topicResponse(final String topicResponse){
 		message.setTopicResponse(topicResponse);
 		return this;
 	}
-	public MessageBuilder setMessageType(final String messageType){
+	public MessageBuilder<T> messageType(final String messageType){
 		message.setMessageType(messageType);
 		return this;
 	}
-	public MessageBuilder setSender(final String sender){
+	public MessageBuilder<T> sender(final String sender){
 		message.setSender(sender);
 		return this;
 	}
-	public MessageBuilder setData(final T data){
+	public MessageBuilder<T> data(final T data){
 		message.setData(data);
 		return this;
 	}

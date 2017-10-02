@@ -20,7 +20,7 @@ public class UserReceiver {
     private String tPlaygroundRequest;
 
 	@Autowired
-	private BasicSender<User> sender;
+	private BasicSender<Message<User>> sender;
 
 	@Autowired
 	private UserService userService;

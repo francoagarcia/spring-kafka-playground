@@ -25,6 +25,7 @@
         <spring-kafka.version>1.2.2.RELEASE</spring-kafka.version>
 		<kafka.version>0.8.2.1</kafka.version>
 		<kafka.clients.version>0.11.0.1</kafka.clients.version>
+		<avro.version>1.8.2</avro.version>
 	</properties>
 
 	<dependencies>
@@ -64,6 +65,12 @@
 			<groupId>com.fasterxml.jackson.datatype</groupId>
 			<artifactId>jackson-datatype-hibernate5</artifactId>
 			<version>${jackson.version}</version>
+		</dependency>
+		<!-- avro -->
+		<dependency>
+			<groupId>org.apache.avro</groupId>
+			<artifactId>avro</artifactId>
+			<version>${avro.version}</version>
 		</dependency>
 
 		<!-- Test -->
