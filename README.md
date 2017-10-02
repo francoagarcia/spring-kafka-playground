@@ -24,5 +24,5 @@ mvn spring-boot:run
 ### 5. Start a Producer and produce a Json Message
 ```
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic playground.req
-> {"user":{"username": "franco", "password": "franco"}}
+> {"data":{"username": "franco", "password": "franco"}}
 ```
